@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Book Club | A blog for readers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="#top" class="brand">The Book Club</a>
+    <nav aria-label="Main">
+        <a href="#posts">Reviews</a>
+        <a href="#shelf">My Shelf</a>
+        <a href="#join">Join</a>
+    </nav>
+</header>
+
+<main id="top">
+    <section class="hero">
+        <p class="eyebrow">A blog for curious readers</p>
+        <h1>Read slowly.<br>Talk about it loudly.</h1>
+        <p class="lead">Honest reviews, reading lists and cozy discussion from a book club of one (and growing).</p>
+        <a class="btn" href="#posts">Browse reviews</a>
+    </section>
+
+    <section id="posts" class="wrap">
+        <h2>Latest reviews</h2>
+        <div class="toolbar">
+            <div id="filters" class="filters" role="group" aria-label="Filter by genre"></div>
+            <label class="search">
+                <span class="sr">Search reviews</span>
+                <input id="search" type="search" placeholder="Search title or author">
+            </label>
+        </div>
+        <div id="post-grid" class="grid"></div>
+        <p id="empty" class="empty" hidden>No reviews match that search. Try another word.</p>
+    </section>
+
+    <section id="shelf" class="wrap shelf-section">
+        <h2>My reading shelf</h2>
+        <p>Saved books appear here. Tap "Save to shelf" on any review.</p>
+        <ul id="shelf-list" class="shelf-list"></ul>
+        <p id="shelf-empty" class="empty">Your shelf is empty for now.</p>
+    </section>
+
+    <section id="join" class="join">
+        <div class="wrap narrow">
+            <h2>Join the book club</h2>
+            <p>One email a month with a new pick, a discussion question and a few quotes worth underlining.</p>
+            <form id="signup" novalidate>
+                <input id="email" name="email" type="email" placeholder="you@example.com" aria-label="Email address">
+                <button class="btn" type="submit">Join</button>
+            </form>
+            <p id="signup-msg" role="status"></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>The Book Club &copy; <span id="year"></span>. Happy reading.</p>
+</footer>
+
+<script src="dynamics.js"></script>
+</body>
+</html>
